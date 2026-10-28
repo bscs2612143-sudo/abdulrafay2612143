@@ -1,0 +1,85 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.parent {
+    height: 400px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.left {
+ border-right: 2px solid black;
+ display: flex;
+ flex-direction: column;
+ height: 100%;
+ align-items: center;
+ justify-content: center;
+ flex: 1;
+
+}
+.right {
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+ flex-direction: column;
+   gap: 35px;
+    flex: 1;
+
+}
+.fa-xmark {
+   
+    transform: translateY(-85px);
+    padding-left: 350px;
+    cursor: pointer;
+
+
+}
+h3 {
+
+    transform: translateY(-55px);
+    padding-right: 300px;
+    cursor: pointer;
+}
+img {
+    height: 250px;
+    width:250px;
+    border-radius: 100%;
+}
+.input1 {
+    height: 25px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    border-color: grey;
+}
+button {
+    height: 30px;
+    width: 170px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    background-color: chartreuse;
+    transition: 1s all ease;
+}
+button:hover {
+    background-color: black;
+    color: white;
+}
+.close {
+    display: none;
+}
+body:has(#close:checked) .parent {
+    display: none;
+}
+body:has(#close:checked) #close {
+    display: block;
+}
